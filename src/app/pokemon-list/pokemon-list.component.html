@@ -1,0 +1,9 @@
+<div class="container">
+<h2>Meus pokemons!</h2>
+</div>
+
+<!-- sempre que colocamos um [] dentro de um seletor (binding), significa que vai vir algum código typescript depois do igual, binding que ele vai no service e pega os dados-->
+<div class="row d-flex justify-content-center">
+  <app-pokemon-card class="col-lg-2 col-md-4 col-sm-4 ms-2" *ngFor="let cadaPokemon of pokemons; index as i" [pokemon]="cadaPokemon" [numero]="i + 1">
+  </app-pokemon-card>
+</div>
